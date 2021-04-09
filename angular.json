@@ -28,7 +28,11 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              { "glob": "**/*",
+                "input": "src/assets/google-bot",
+                "output": "./"
+              }
             ],
             "styles": [
               "src/styles.scss"

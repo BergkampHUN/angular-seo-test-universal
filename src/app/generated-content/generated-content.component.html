@@ -1,14 +1,23 @@
 <h1>Component inside the router-outlet</h1>
 <p>generated-content works!</p>
+<a href="/sub-page">Link to sub-page</a><br>
+<a [routerLink]="['/r-sub-page']">Router-link to sub-page</a><br>
+<button (click)="goToPages('b-sub-page')">Button link to sub-page</button>
 
 <div class="conditional-content" *ngIf="showContent">
   <h1>This is a title in an ng-if</h1>
   <p>contend of the conditional block</p>
+  <a href="/conditional-page">Link to conditional-page</a><br>
+  <a [routerLink]="['/r-conditional-page']">Router-link to conditional-page</a><br>
+  <button (click)="goToPages('b-conditional-page')">Button link to conditional-page</button>
 </div>
 
 <div class="rxjs-content">
   <ng-container *ngIf="(serverContent$ | async) as serverContent">
     <h1>{{ serverContent.title }}</h1>
     <p>{{ serverContent.desc }}</p>
+    <a href="/observable-page">Link to observable-page</a><br>
+    <a [routerLink]="['/r-observable-page']">Router-link to observable-page</a><br>
+    <button (click)="goToPages('b-observable-page')">Button link to observable-page</button>
   </ng-container>
 </div>

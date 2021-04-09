@@ -1,5 +1,9 @@
+<a href="/">HOME</a>
 <div class="native-content">
   <h1>This is the hardcoded title</h1>
   <p>Hard coded description.</p>
+  <a href="/hardcoded-page">Link to hardcoded page</a><br>
+  <a [routerLink]="['/r-hardcoded-page']">Router-link to hardcoded-page</a><br>
+  <button (click)="goToPages('b-hardcoded-page')">Button link to hardcoded-page</button>
 </div>
 <router-outlet></router-outlet>
