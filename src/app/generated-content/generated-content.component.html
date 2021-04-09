@@ -1,0 +1,14 @@
+<h1>Component inside the router-outlet</h1>
+<p>generated-content works!</p>
+
+<div class="conditional-content" *ngIf="showContent">
+  <h1>This is a title in an ng-if</h1>
+  <p>contend of the conditional block</p>
+</div>
+
+<div class="rxjs-content">
+  <ng-container *ngIf="(serverContent$ | async) as serverContent">
+    <h1>{{ serverContent.title }}</h1>
+    <p>{{ serverContent.desc }}</p>
+  </ng-container>
+</div>
