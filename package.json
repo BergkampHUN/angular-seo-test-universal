@@ -11,7 +11,7 @@
     "serve:ssr": "node dist/angular-seo-test/server/main.js",
     "build:ssr": "ng build --prod && ng run angular-seo-test:server:production",
     "prerender": "ng run angular-seo-test:prerender",
-    "start:heroku": "serve:ssr",
+    "start:heroku": "npm run serve:ssr",
     "postinstall": "npm run build:ssr"
   },
   "private": true,
