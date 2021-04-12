@@ -35,7 +35,7 @@ import { RHardcodedPageComponent } from './generated-content/r-hardcoded-page/r-
     RHardcodedPageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule
   ],
   providers: [],
